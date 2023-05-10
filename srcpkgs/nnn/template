@@ -4,6 +4,7 @@ version=4.8
 revision=1
 build_style=gnu-makefile
 make_install_target="install install-desktop"
+make_build_args="$(vopt_if icons O_ICONS=1) $(vopt_if nerd O_NERD=1) $(vopt_if emoji O_EMOJI=1)"
 hostmakedepends="pkg-config"
 makedepends="ncurses-devel readline-devel"
 short_desc="Missing terminal file browser for X"
@@ -13,6 +14,11 @@ homepage="https://github.com/jarun/nnn"
 changelog="https://raw.githubusercontent.com/jarun/nnn/master/CHANGELOG"
 distfiles="https://github.com/jarun/nnn/archive/v${version}.tar.gz"
 checksum=0a744e67a0ce8b5e1e04961f542d2c33ddb6ceed46ba760dd35c4922b21f1146
+
+build_options="icons nerd emoji"
+desc_option_icons="Enable icons-in-terminal support in NNN"
+desc_option_nerd="Enable Nerd Fonts icons support in NNN"
+desc_option_emoji="Enable emoji support in NNN"
 
 if [ "$XBPS_TARGET_LIBC" = "musl" ]; then
 	makedepends+=" musl-fts-devel"
