@@ -1,0 +1,21 @@
+# Template file for 'hudkit'
+pkgname=hudkit
+version=4.1.0
+revision=1
+build_style=gnu-makefile
+hostmakedepends="pkg-config"
+makedepends="gtk+3-devel webkit2gtk-devel"
+short_desc="Transparent fullscreen on-top click-through WebKit web view"
+maintainer="sirkhancision <jsantiago12tone@gmail.com>"
+license="ISC"
+homepage="https://github.com/anko/hudkit"
+distfiles="https://github.com/anko/hudkit/archive/refs/tags/v${version}.tar.gz"
+checksum=55d9ee1e5efe86835f811936a4144cccc59f586ff3a36fce825cd009b89d5b7c
+
+do_install() {
+	vbin hudkit
+}
+
+post_install() {
+	vlicense LICENSE.md
+}
