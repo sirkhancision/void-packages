@@ -1,0 +1,18 @@
+# Template file for 'balena-etcher'
+pkgname=balena-etcher
+version=1.18.8
+revision=1
+archs="x86_64"
+short_desc="USB and SD card OS image flasher"
+maintainer="sirkhancision <jsantiago12tone@gmail.com>"
+license="Apache-2.0"
+homepage="https://etcher.io/"
+distfiles="https://github.com/balena-io/etcher/releases/download/v1.18.8/balena-etcher_${version}_amd64.deb"
+checksum=de4a2666b90d3de6b3203cb0a583845f2b4b45dc856e1426e986b30754b0d5e4
+nostrip=yes
+restricted=yes
+
+do_install() {
+	vcopy opt /
+	vcopy usr /
+}
