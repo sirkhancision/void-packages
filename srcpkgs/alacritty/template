@@ -1,6 +1,6 @@
 # Template file for 'alacritty'
 pkgname=alacritty
-version=0.11.0
+version=0.12.1
 revision=1
 build_style=cargo
 make_install_args="--path alacritty"
@@ -13,7 +13,7 @@ license="Apache-2.0"
 homepage="https://github.com/alacritty/alacritty"
 changelog="https://raw.githubusercontent.com/alacritty/alacritty/master/CHANGELOG.md"
 distfiles="https://github.com/alacritty/alacritty/archive/refs/tags/v${version}.tar.gz"
-checksum=0fb3370c662f5b87d1b9a487aef999195212b192e08f6f68a572fed8fd637e07
+checksum=14bce0bfc538872c97e0e38b9233a9d1fa992dcf83a22b6035da5fe58a55bc6c
 
 case "$XBPS_TARGET_MACHINE" in
 	ppc64*) ;;

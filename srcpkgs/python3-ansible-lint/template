@@ -1,9 +1,8 @@
 # Template file for 'python3-ansible-lint'
 pkgname=python3-ansible-lint
-version=6.13.1
+version=6.17.1
 revision=1
 build_style=python3-pep517
-make_install_target="dist/ansible_lint-*-*-*-*.whl"
 hostmakedepends="python3-wheel python3-setuptools_scm"
 depends="python3-ansible-compat ansible-core black python3-filelock
  python3-jsonschema python3-packaging python3-yaml python3-rich
@@ -18,7 +17,7 @@ maintainer="Jan Christian Grünhage <jan.christian@gruenhage.xyz>"
 license="GPL-3.0-only"
 homepage="https://github.com/ansible/ansible-lint"
 distfiles="${PYPI_SITE}/a/ansible-lint/ansible-lint-${version}.tar.gz"
-checksum=435c12b4fd88da815af6821f3bf8b04ebb651811da89a11c9d190baff21badaa
+checksum=f34e333f3555c99ff34c778f61d470d1e3a1eb6dc76090d0dd7b95b2c94745c2
 # cba anymore, the list of failing tests changes with every update
 make_check="no"
 

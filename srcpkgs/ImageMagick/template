@@ -1,6 +1,7 @@
 # Template file for 'ImageMagick'
 pkgname=ImageMagick
-version=7.1.0.62
+# Revbump php*-imagick with ImageMagick updates.
+version=7.1.1.12
 revision=1
 _upstream_version="${version/.${version##*.}/-${version##*.}}"
 build_style=gnu-configure
@@ -19,7 +20,7 @@ license="ImageMagick"
 homepage="https://www.imagemagick.org"
 changelog="https://raw.githubusercontent.com/ImageMagick/Website/main/ChangeLog.md"
 distfiles="https://github.com/ImageMagick/ImageMagick/archive/${_upstream_version}.tar.gz"
-checksum=d282117bc6d0e91ad1ad685d096623b96ed8e229f911c891d83277b350ef884a
+checksum=51567d11fcbca5bd591d191ce9fdf821e2ed1b12c1ad8bc2a2f13da5c6313f33
 
 subpackages="libmagick libmagick-devel"
 
