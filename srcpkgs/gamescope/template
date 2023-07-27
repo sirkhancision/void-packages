@@ -1,27 +1,32 @@
 # Template file for 'gamescope'
 pkgname=gamescope
-version=3.11.51
+version=3.12.0
 revision=1
-_vkroots=e6b89494142eec0ac6061f82a947d2f1246d3d7a
+_openvr=1a0ea26642e517824b66871e6a12280a426cfec3
+_vkroots=26757103dde8133bab432d172b8841df6bb48155
 archs="x86_64* i686"
 create_wrksrc=yes
 build_wrksrc=$pkgname-$version
 build_style=meson
-hostmakedepends="pkg-config glslang Vulkan-Headers xorg-server-xwayland"
-makedepends="SDL2-devel hwids libX11-devel libXcomposite-devel libXdamage-devel libXext-devel libXfixes-devel libXrender-devel libXres-devel libXtst-devel libXxf86vm-devel libcap-devel libdrm-devel libliftoff-devel libpipewire libseat-devel libxkbcommon-devel stb vulkan-loader wayland-devel wayland-protocols wlroots-devel"
+hostmakedepends="cmake hwids pkg-config glslang Vulkan-Headers xorg-server-xwayland"
+makedepends="SDL2-devel benchmark-devel glm hwids libdisplay-info-devel libX11-devel libXcomposite-devel libXdamage-devel libXext-devel libXfixes-devel libXmu-devel libXrender-devel libXres-devel libXtst-devel libXxf86vm-devel libcap-devel libdrm-devel libliftoff-devel libpipewire libseat-devel libxkbcommon-devel stb vulkan-loader wayland-devel wayland-protocols wlroots-devel"
 depends="xorg-server-xwayland"
 short_desc="SteamOS session compositing window manager"
 maintainer="sirkhancision <jsantiago12tone@gmail.com>"
 license="BSD-2-Clause"
 homepage="https://github.com/Plagman/gamescope"
 distfiles="https://github.com/Plagman/gamescope/archive/refs/tags/${version}.tar.gz
- https://github.com/Joshua-Ashton/vkroots/archive/${_vkroots}.tar.gz>vkroots-${_vkroots}.tar.gz"
-checksum="0ffe1c3e3cdf40e20b45b758f8e4c334c5c0941eb05437e59e9c6aaf8c948a1e
- 501568cf7f868b1b7fda71030a20ca9cb785025c89f45a156534270c376758ce"
+ https://github.com/Joshua-Ashton/vkroots/archive/${_vkroots}.tar.gz>vkroots-${_vkroots}.tar.gz
+ https://github.com/ValveSoftware/openvr/archive/${_openvr}.tar.gz>openvr-${_openvr}.tar.gz"
+checksum="50c30efba155459acc1a36d0cbf785eb2cd129db07aa21b0078d7fe0ec1d01b5
+ adf158c3da572f1dfaa6e1a7a51943aafb824222e77f512a4666472d71321244
+ 6285504e64a37df47856ffa4a12709d0703da37ee1b0c9fe9e8e52a55127dd7d"
 
 pre_configure() {
 	rmdir subprojects/vkroots
 	cp -r "../vkroots-${_vkroots}" subprojects/vkroots
+	rmdir subprojects/openvr
+	cp -r "../openvr-${_openvr}" subprojects/openvr
 }
 
 post_install() {

@@ -1,5 +1,5 @@
---- a/gamescope-3.11.51/meson.build
-+++ b/gamescope-3.11.51/meson.build
+--- a/gamescope-3.12.0/meson.build
++++ b/gamescope-3.12.0/meson.build
 @@ -6,7 +6,6 @@
    default_options: [
      'cpp_std=c++14',

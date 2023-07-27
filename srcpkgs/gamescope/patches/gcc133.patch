@@ -1,7 +1,7 @@
 diff --git a/src/drm.hpp b/src/drm.hpp
 index 2f416c4..849ec96 100644
---- a/gamescope-3.11.51/src/drm.hpp
-+++ b/gamescope-3.11.51/src/drm.hpp
+--- a/gamescope-3.12.0/src/drm.hpp
++++ b/gamescope-3.12.0/src/drm.hpp
 @@ -40,12 +40,13 @@ extern "C" {
  
  #include "rendervulkan.hpp"
@@ -18,8 +18,8 @@ index 2f416c4..849ec96 100644
  struct saved_mode {
 diff --git a/src/main.cpp b/src/main.cpp
 index 99a7a48..4cab9d1 100644
---- a/gamescope-3.11.51/src/main.cpp
-+++ b/gamescope-3.11.51/src/main.cpp
+--- a/gamescope-3.12.0/src/main.cpp
++++ b/gamescope-3.12.0/src/main.cpp
 @@ -2,6 +2,7 @@
  
  #include <cstdio>
@@ -30,8 +30,8 @@ index 99a7a48..4cab9d1 100644
  #include <cstring>
 diff --git a/src/sdlwindow.cpp b/src/sdlwindow.cpp
 index ecf95ce..d886e15 100644
---- a/gamescope-3.11.51/src/sdlwindow.cpp
-+++ b/gamescope-3.11.51/src/sdlwindow.cpp
+--- a/gamescope-3.12.0/src/sdlwindow.cpp
++++ b/gamescope-3.12.0/src/sdlwindow.cpp
 @@ -1,5 +1,6 @@
  // For the nested case, reads input from the SDL window and send to wayland
  
